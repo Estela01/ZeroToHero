@@ -1,0 +1,116 @@
+@font-face {
+  font-family: Futhark;
+  src: url("../fonts/RUNE.TTF");
+}
+
+header,
+footer,
+nav {
+  /* Textura do cabeçalho, rodapé e menu */
+  background-image: URL("../images/texture.png");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: URL("../images/textureBG.png");
+}
+
+header {
+  color: #ddd;
+  width: 100%;
+  text-align: center;
+}
+
+footer {
+  height: 50px;
+  text-align: center;
+  color: #ccc;
+  padding-top: 3vh;
+}
+
+h2 {
+  font-size: 42pt;
+  font-weight: bold;
+  margin: 0;
+  padding: 20px;
+}
+
+a {
+  color: #666;
+  font-family: Futhark;
+  text-decoration: none;
+}
+
+nav {
+  position: sticky;
+  position: -webkit-sticky;
+
+  border: 2px solid;
+  border-color: #999 #999 #ccc #ccc;
+  top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+li {
+  height: 50px;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  list-style: none;
+  transition: all ease 0.3s;
+}
+
+li:hover {
+  border-color: #666;
+}
+
+li a {
+  font-size: 32pt;
+}
+
+.god-section {
+  width: 50vw;
+  height: 100vh;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding-top: 150px;
+  text-align: justify;
+}
+
+.god-section img {
+  height: 20vmax;
+  margin-bottom: 5vh;
+}
+
+.god-section p {
+  font-size: 1.3em;
+}
+
+.parallax {
+  background-image: url("../images/foto1.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: 90px;
+  background-attachment: fixed;
+}
+
+.parallax.final {
+  background-image: url("../images/foto3.jpg");
+  background-position: center;
+}
