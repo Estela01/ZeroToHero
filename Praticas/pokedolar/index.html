@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/gif/png" href="pokeball.png">
+    <title>Pokedolar</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: calc(1em + 1vw)
+    }
+
+    .visor {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+
+        font-family: 'Courier New', Courier, monospace;
+        background-color: #dadada;
+        background-blend-mode: overlay;
+        background-image: url('pokeball.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        border: 3vmin solid #222;
+    }
+
+    img {
+        width: 40vmax;
+    }
+
+    #name {
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+
+    #date {
+        position: fixed;
+        bottom: 3vmin;
+        right: calc(3vmin + 8px);
+    }
+</style>
+
+<body>
+    <div class="visor">
+
+        <span id="name"></span>
+        <img src='' alt="" />
+
+        <span id="date"></span>
+    </div>
+</body>
+
+<script>
+    const image = document.querySelector('img');
+    const name_span = document.querySelector('#name');
+    const date_span = document.querySelector('#date');
+
+    fetch('https://economia.awesomeapi.com.br/json/daily/USD-BRL/1')
+        .then(async r => {
+            // console.log(await r);
+            const response = await r.text();
+            const dolar = JSON.parse(response)[0].ask
+            const date = JSON.parse(response)[0].create_date
+            const datetime = new Date(date)
+            const dolar_ajustado = Number(dolar) * 100;
+            const pokemon = parseInt(dolar_ajustado);
+
+
+            fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+                .then(async r => {
+                    const response = await r.text();
+                    const poke = JSON.parse(response)
+                    const name = poke.name
+                    const sprite = poke.sprites.other['official-artwork'].front_default
+                    image.src = sprite;
+                    image.alt = `imagem de ${name}`
+                    name_span.innerHTML = `#${pokemon} - ${name} (R$ ${dolar.slice(0, 4)})`;
+                    date_span.innerHTML = datetime.toLocaleString();
+
+                })
+                .catch(e => console.error('Boo...' + e));
+
+        })
+        .catch(e => console.error('Boo...' + e));
+
+</script>
+
+</html>
