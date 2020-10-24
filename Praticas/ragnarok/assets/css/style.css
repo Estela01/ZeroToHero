@@ -22,7 +22,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 138px;
+  padding: 16px 10vw;
 }
 
 header > img {
@@ -54,6 +54,7 @@ main {
   row-gap: 5vh;
   align-items: center;
   place-content: center;
+  padding: 16px;
 }
 
 footer {
@@ -77,4 +78,18 @@ img {
 
 img:active {
   transform: scale(0.9);
+}
+
+@media (max-width: 800px) {
+  main {
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    grid-template-columns: 200px;
+    grid-template-rows: 200px;
+  }
 }
