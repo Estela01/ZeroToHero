@@ -77,9 +77,14 @@ img {
 }
 
 img:active {
-  transform: scale(0.9);
+  transform: scale(1.1);
 }
 
+.potion:hover {
+  animation: shake 0.1s;
+}
+
+/* Responsividade */
 @media (max-width: 800px) {
   main {
     grid-template-columns: 200px 200px;
@@ -91,5 +96,24 @@ img:active {
   main {
     grid-template-columns: 200px;
     grid-template-rows: 200px;
+  }
+}
+
+/* Animação */
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(-5deg);
   }
 }
