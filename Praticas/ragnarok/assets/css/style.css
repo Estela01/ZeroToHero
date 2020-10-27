@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  cursor: url("../images/ro_default.cur"), auto;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(1em + 1vw);
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-size: 0.5em;
+}
+
+header {
+  background-image: url("../images/banner.png");
+  max-height: 179px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 10vw;
+}
+
+header > img {
+  height: 15vh;
+  max-height: 149px;
+}
+
+header p {
+  font-weight: 700;
+  padding: 8px;
+  text-align: center;
+}
+
+header p:first-child {
+  color: #ff7d73;
+  background-color: white;
+}
+header p:nth-child(2) {
+  color: #ff9d4a;
+}
+
+main {
+  flex: 1;
+
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 200px 200px;
+  column-gap: 5vw;
+  row-gap: 5vh;
+
+  place-content: center;
+  justify-content: center;
+  align-items: center;
+
+  padding: 16px;
+}
+
+footer {
+  height: 79px;
+  background: rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  font-size: 0.5em;
+}
+
+.potion-container {
+  text-align: center;
+  transition: box-shadow ease 0.25s;
+  color: #444444;
+}
+
+img {
+  cursor: url("../images/ro_hand.cur"), auto;
+}
+
+img:active {
+  transform: scale(1.1);
+}
+
+.potion:hover {
+  animation-name: shake;
+  animation-duration: 100ms;
+  animation-iteration-count: 1;
+}
+
+/* Responsividade */
+@media (max-width: 800px) {
+  main {
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    grid-template-columns: 200px;
+    grid-template-rows: 200px;
+  }
+}
+
+/* Animação */
+@keyframes shake {
+  0% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
