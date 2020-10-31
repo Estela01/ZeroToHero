@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/chota.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+    <script src="scripts/game.js" defer></script>
+    <title>Adivinhe um número</title>
+</head>
+
+<body>
+    <main class='card col-12 col-8-md col-6-lg'>
+        <h1>Adivinhe um número</h1>
+        <p>
+            Selecionamos um número aleatório entre 1 e 100. Veja se consegue adivinhar em 10 chances ou menos. Lhe
+            diremos
+            se seu palpite está com valor alto ou baixo.
+
+        </p>
+        <p class='guess-record'></p>
+        <p class="grouped">
+            <input min='0' max='100' class='guess-field' type="number" placeholder="Seu palpite" />
+            <button onclick="palpitar()" class="button primary">Palpitar!</button>
+        </p>
+        <p class='result text-white'></p>
+        <p>Palpites anteriores:<span class='guesses'></span></p>
+
+        <button onclick='resetGame()' class="button secondary new-game">Reiniciar</button>
+
+
+    </main>
+
+</body>
+
+</html>
