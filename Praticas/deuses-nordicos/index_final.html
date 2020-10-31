@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/gif/png" href="assets/images/Mjollnir.png">
     <title>Norse Gods</title>
-    <script src="script.js" defer></script>
+
 </head>
 
 <body>
@@ -28,10 +28,10 @@
                 <a href="#thor">THOR</a>
             </li>
             <li>
-                <a href="#loki">LOKI</a>
+                <a onclick="goTo('#loki')">LOKI</a>
             </li>
             <li>
-                <a href="#heimdall">HEIMDALL</a>
+                <a onclick="document.querySelector('#heimdall').scrollIntoView()">HEIMDALL</a>
             </li>
         </ul>
     </nav>
@@ -109,12 +109,36 @@
 
     <section class="parallax final"></section>
 
-    <a id="toTop">Topo</a>
+    <a id="topButton" onclick="scrollToTop()"><img src="assets/images/Mjollnir.png" alt="Mjollnir" /></a>
 
     <footer>Desenvolvido por Schaffer e Estela</footer>
 
 
 </body>
 
+
+<script type="text/javascript">
+    const topButton = document.getElementById("topButton");
+    const header = document.querySelector('header')
+
+    const goTo = (x) => {
+        document.querySelector(x).scrollIntoView()
+    }
+
+
+    const scrollToTop = () => {
+        header.scrollIntoView();
+        window.location.hash = '#'
+    }
+
+    window.onscroll = (e) => {
+        if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
+            topButton.style.display = "block";
+
+        } else {
+            topButton.style.display = "none";
+        }
+    }
+</script>
 
 </html>
