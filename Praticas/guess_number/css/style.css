@@ -1,0 +1,29 @@
+@import url(chota.css);
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #faebd7;
+}
+
+:root {
+  --color-primary: #7298ad;
+  --color-secondary: #ad8772;
+  --color-error: #d32f2f;
+  --color-success: #4caf50;
+  --color-yellow: #d4872d;
+}
+
+.bg-yellow {
+  background-color: var(--color-yellow);
+}
+
+.new-game {
+  width: 100%;
+}
+
+.result {
+  min-height: 25px;
+}
