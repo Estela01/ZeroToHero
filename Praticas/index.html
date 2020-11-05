@@ -4,18 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Práticas</title>
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Press Start 2P', cursive;
+        }
+
+        body {
+            padding: 50px;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    </style>
+    <title>Zero to hero</title>
 </head>
 
 <body>
-    <h1>Escolha a prática</h1>
-    <ul>
-        <li><a href="deuses-nordicos">Deuses</a></li>
-        <li><a href="guess_number">Adivinhe</a></li>
-        <li><a href="pokedolar">Pokedolar</a></li>
-        <li><a href="ragnarok">Ragnarok</a></li>
-        <li><a href="tesla-clone">Tesla</a></li>
-    </ul>
+    <div class='row'>
+        <h1>Zero to Hero </h1>
+        <a href="https://github.com/Estela01/ZeroToHero" target="_blank" class="nes-badge">
+            <span class="is-primary">Github</span>
+        </a>
+    </div>
+
+
+
+    <div class="nes-container with-title">
+        <p class="title">Escolha a prática</p>
+        <ul class="nes-list is-circle">
+            <li><a href="deuses-nordicos">Deuses</a></li>
+            <li><a href="tesla-clone">Tesla</a></li>
+            <li><a href="ragnarok">Ragnarok</a></li>
+            <li><a href="guess_number">Adivinhe</a></li>
+            <li><a href="pokedolar">Pokedolar</a></li>
+            <li><a href="3d_effect">Efeito 3D</a></li>
+        </ul>
+    </div>
+
 </body>
 
 </html>

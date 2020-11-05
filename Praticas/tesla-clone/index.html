@@ -120,5 +120,18 @@
 
     </div>
 </body>
+<script>
+    const menu = document.querySelector(".material-icons");
+
+    menu.addEventListener("click", (e) => {
+        element = e.target;
+
+        if (e.target.innerHTML === "menu") {
+            e.target.innerHTML = "close";
+        } else {
+            e.target.innerHTML = "menu";
+        }
+    });
+</script>
 
 </html>
