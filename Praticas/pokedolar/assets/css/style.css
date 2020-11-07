@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  cursor: url("../images/Pokeball.cur"), auto;
+}
+
+html {
+  font-size: calc(1em + 1vw);
+}
+
+.visor {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100vw;
+
+  font-family: "Courier New", Courier, monospace;
+  background-color: #dadada;
+  background-blend-mode: overlay;
+  background-image: url("../images/pokeball.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border: 3vmin solid #222;
+  position: relative;
+}
+
+img {
+  width: 40vmax;
+}
+
+#name {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+#date {
+  position: fixed;
+  bottom: 3vmin;
+  right: calc(3vmin + 8px);
+}
+
+.pokemon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.pokeball {
+  width: 30vmin;
+  height: 30vmin;
+  overflow: hidden;
+  position: absolute;
+  display: none;
+  animation: swing 800ms infinite;
+}
+
+.loading {
+  display: inline-block;
+}

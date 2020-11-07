@@ -1,4 +1,4 @@
-const botaoTopo = document.querySelector("#toTop");
+const botaoTopo = document.querySelector("#topButton");
 const header = document.querySelector("header");
 
 window.onscroll = () => {

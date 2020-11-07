@@ -45,7 +45,6 @@ footer {
 h2 {
   font-size: 42pt;
   font-weight: bold;
-  animation: show-off 500ms;
 }
 
 a,
@@ -146,9 +145,14 @@ li a {
   background-position: center;
 }
 
-#toTop {
+#topButton {
   position: fixed;
   bottom: 20px;
   right: 30px;
   display: none;
+}
+
+#topButton img {
+  height: 50px;
+  transform: rotate(180deg);
 }
