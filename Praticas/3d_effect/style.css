@@ -12,7 +12,7 @@ body {
   align-items: center;
   justify-content: center;
   perspective: 1000px;
-  background-image: url("./img/world_zelda.png");
+  background-image: url("./img/world.jpg");
   overflow-y: hidden;
 }
 .container {
@@ -43,8 +43,8 @@ body {
   transition: all 0.75s ease-out;
 }
 .circle {
-  width: 15rem;
-  height: 15rem;
+  width: 20rem;
+  height: 20rem;
   background: linear-gradient(
     to right,
     rgba(35, 132, 223, 0.75),
@@ -54,7 +54,6 @@ body {
   border-radius: 50%;
   z-index: 1;
 }
-
 .info h1 {
   font-size: 3rem;
   transition: all 0.75s ease-out;
@@ -66,13 +65,13 @@ body {
   font-weight: lighter;
   transition: all 0.75s ease-out;
 }
-.sizes {
+.levels {
   display: flex;
   justify-content: space-between;
   transition: all 0.75s ease-out;
   pointer-events: none;
 }
-.sizes button {
+.levels button {
   padding: 0.5rem 2rem;
   background: none;
   border: none;
@@ -84,21 +83,6 @@ body {
   pointer-events: auto;
 }
 button.active {
-  background: #585858;
+  background: rgba(33, 156, 8, 0.75);
   color: white;
-}
-.purchase {
-  margin-top: 5rem;
-  margin-bottom: 3rem;
-  transition: all 0.75s ease-out;
-}
-.purchase button {
-  width: 100%;
-  padding: 1rem 0rem;
-  background: #229e41;
-  border: none;
-  color: white;
-  cursor: pointer;
-  border-radius: 30px;
-  font-weight: bolder;
 }
